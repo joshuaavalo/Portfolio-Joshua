@@ -286,7 +286,7 @@ html{
 }
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .htmlcss{
@@ -295,7 +295,7 @@ html{
 }
 @keyframes htmlcss {
     0%{width: 0%;}
-    100%{width: 89%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .photoshop{
@@ -322,7 +322,7 @@ html{
 }
 @keyframes drupal {
     0%{width: 0%;}
-    100%{width: 55%;}
+    100%{width: 65%;}
 }
 
 .skills .skill .comunicacion{
@@ -331,7 +331,7 @@ html{
 }
 @keyframes comunicacion {
     0%{width: 0%;}
-    100%{width: 80%;}
+    100%{width: 85%;}
 }
 
 .skills .skill .trabajo{
@@ -340,7 +340,7 @@ html{
 }
 @keyframes trabajo {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 90%;}
 }
 
 .skills .skill .creatividad{
@@ -358,7 +358,7 @@ html{
 }
 @keyframes dedicacion {
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 85%;}
 }
 
 .skills .skill .proyect{
