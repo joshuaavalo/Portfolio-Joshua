@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("u8poFJqVZn5RBj1ka");//id email
+
+  })();
+</script>
 </head>
 <body>
     <!-- MENU ENCABEZADO -->
@@ -387,15 +394,17 @@
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
+                    <form id="contact-form" method="POST"> 
+                        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                        <input type="text" name="telefono" placeholder="Número telefónico" required>
+                        <input type="email" name="correo" placeholder="Dirección de correo" required>
+                        <input type="text" name="tema" placeholder="Tema" required>
+                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <button type="submit">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
                 </div>
                 <!-- Mapa -->
                 <div class="col">
@@ -420,6 +429,19 @@
             </div>
         </div>
     </section>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evitar que se recargue la página
+      
+          // Enviar el formulario a través de EmailJS
+          emailjs.sendForm('service_of1skt3', 'template_kw4ganp', this)
+            .then(function() {
+              alert('Mensaje enviado correctamente');
+            }, function(error) {
+              alert('Error al enviar el mensaje: ' + JSON.stringify(error));
+            });
+        });
+      </script>
 
     <!-- footer -->
     <footer>
